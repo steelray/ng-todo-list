@@ -1,4 +1,9 @@
-<form class="auth-form" [formGroup]="form" (ngSubmit)="onSubmit()">
+<form
+  class="auth-form"
+  [formGroup]="form"
+  (ngSubmit)="onSubmit(formDirective)"
+  #formDirective="ngForm"
+>
   <app-input
     [type]="inputTypes.TEXT"
     label="Название"
