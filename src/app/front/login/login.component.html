@@ -1,0 +1,20 @@
+<h2>Авторизация</h2>
+<form class="auth-form" [formGroup]="form" (ngSubmit)="onSubmit()">
+  <app-input
+    [type]="inputTypes.TEXT"
+    label="Ваш логин"
+    [control]="form.get('login')"
+  ></app-input>
+  <app-input
+    [type]="inputTypes.PASSWORD"
+    label="Ваш Пароль"
+    [control]="form.get('password')"
+  ></app-input
+  ><app-button
+    [color]="buttonColors.ACCENT"
+    [type]="buttonTypes.FLAT"
+    btnType="submit"
+    text="Войти"
+    class="w-100"
+  ></app-button>
+</form>

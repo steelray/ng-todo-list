@@ -1,0 +1,23 @@
+<form class="auth-form" [formGroup]="form" (ngSubmit)="onSubmit()">
+  <app-input
+    [type]="inputTypes.TEXT"
+    label="Название"
+    [control]="form.get('title')"
+  ></app-input>
+  <app-textarea
+    label="Описание"
+    [control]="form.get('description')"
+  ></app-textarea>
+  <app-select
+    [options]="taskStatusList"
+    [control]="form.get('status')"
+    label="Статус"
+  ></app-select>
+  <app-button
+    [color]="buttonColors.ACCENT"
+    [type]="buttonTypes.FLAT"
+    btnType="submit"
+    text="Добавить"
+    class="w-100"
+  ></app-button>
+</form>

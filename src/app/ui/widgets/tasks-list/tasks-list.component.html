@@ -1,0 +1,11 @@
+<div class="tasks-list">
+  <div class="task-item" *ngFor="let task of tasks; trackBy: trackByFn">
+    <a class="task-item__title" [routerLink]="['/task', task.id]">
+      {{ task.title }}
+    </a>
+    <span class="task-item__status {{ task.status }}">{{
+      taskStatusObject[task.status]
+    }}</span>
+    <span class="task-item__remove" (click)="onRemove(task.id)">x</span>
+  </div>
+</div>

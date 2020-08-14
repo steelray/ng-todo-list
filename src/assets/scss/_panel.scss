@@ -1,0 +1,28 @@
+body {
+  .panel {
+    border: 1px solid $border-color;
+    border-radius: 4px;
+    background: $gray;
+
+    &-header {
+      padding: 10px 15px;
+      border-bottom: $dark-gray;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: $main-color;
+      color: $white;
+    }
+
+    &-title {
+      margin: 0;
+      font-size: 18px;
+      font-weight: normal;
+    }
+
+    &-content {
+      padding: 15px;
+    }
+  }
+
+}

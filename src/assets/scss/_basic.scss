@@ -1,0 +1,25 @@
+.container {
+  width: 640px;
+  margin: 0 auto;
+}
+
+.task-status-change {
+  background: $white;
+  color: #111111;
+  border-radius: 5px;
+
+
+  .mat-form-field-appearance-legacy .mat-form-field-wrapper {
+    padding: 0;
+  }
+
+  .mat-form-field-appearance-legacy .mat-form-field-underline {
+    display: none;
+  }
+
+  .mat-form-field-infix {
+    padding: 10px;
+    margin: 0;
+    border: 0;
+  }
+}

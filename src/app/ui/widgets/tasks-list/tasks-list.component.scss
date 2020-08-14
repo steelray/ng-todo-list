@@ -1,0 +1,67 @@
+@import "../../../../assets/scss/variables";
+
+.task {
+  &-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: top;
+    padding: 10px 15px;
+    background: $white;
+    border-radius: 3px;
+    border: 1px solid #f9f9f9;
+    transition: all 0.4s;
+    position: relative;
+
+    &:hover {
+      box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 10px;
+    }
+
+    &__title {
+      flex: 1;
+      padding-right: 15px;
+      align-self: center;
+      color: #111;
+      text-transform: uppercase;
+      font-size: 15px;
+      text-decoration: none;
+      transition: color 0.4s;
+
+      &:hover {
+        color: $main-color;
+      }
+    }
+
+    &__status {
+      display: inline-block;
+      background: $dark-gray;
+      color: $white;
+      border-radius: 4px;
+      padding: 5px 10px;
+      font-size: 12px;
+
+      &.in_progress {
+        background: rgb(10, 187, 10);
+      }
+    }
+
+    &__remove {
+      color: $main-color;
+      position: absolute;
+      bottom: calc(100% - 10px);
+      left: calc(100% - 5px);
+      cursor: pointer;
+      font-size: 12px;
+      width: 15px;
+      height: 15px;
+      line-height: 15px;
+      text-align: center;
+      border-radius: 50%;
+      border: 1px solid $main-color;
+      background: $white;
+    }
+  }
+}

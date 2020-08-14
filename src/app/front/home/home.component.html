@@ -1,0 +1,18 @@
+<div class="container">
+  <div class="panel">
+    <header class="panel-header">
+      <h2 class="panel-title">Список задач</h2>
+      <app-button
+        text="Создать задачу"
+        [color]="buttonColors.ACCENT"
+        [routerLink]="['/admin']"
+      ></app-button>
+    </header>
+    <div class="panel-content">
+      <app-tasks-list
+        [tasks]="tasks$ | async"
+        (removeTask)="onRemoveTask($event)"
+      ></app-tasks-list>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,14 @@
+<div class="container">
+  <div class="panel" *ngIf="task$ | async as task">
+    <div class="panel-header">
+      <div class="panel-title">{{ task.title }}</div>
+      <app-select
+        [control]="statusControl"
+        [options]="statusList"
+        class="task-status-change"
+        (selected)="onStatusChange($event)"
+      ></app-select>
+    </div>
+    <div class="panel-content">{{ task.description }}</div>
+  </div>
+</div>
